@@ -4894,6 +4894,8 @@ in {
 
   repocheck = callPackage ../development/python-modules/repocheck { };
 
+  restrictedpython = callPackage ../development/python-modules/restrictedpython { };
+
   restview = callPackage ../development/python-modules/restview { };
 
   readme = callPackage ../development/python-modules/readme { };
