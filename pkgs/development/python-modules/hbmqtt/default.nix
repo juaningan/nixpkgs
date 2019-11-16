@@ -1,5 +1,5 @@
 { stdenv, buildPythonPackage, fetchPypi, isPy3k
-, transitions, websockets, passlib, docopt, pyyaml, nose }:
+, transitions, websockets, passlib, docopt, pyyaml }:
 
 buildPythonPackage rec {
   pname = "hbmqtt";
@@ -13,12 +13,6 @@ buildPythonPackage rec {
   };
 
   propagatedBuildInputs = [ transitions websockets passlib docopt pyyaml ];
-
-  checkInputs = [ nose ];
-
-  checkPhase = ''
-    nosetests -e test_connect_tcp
-  '';
 
   meta = with stdenv.lib; {
     homepage = https://github.com/beerfactory/hbmqtt;
