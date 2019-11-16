@@ -15,7 +15,8 @@ buildPythonPackage rec {
   checkInputs = [ nose ];
 
   checkPhase = ''
-    nosetests --exclude=.*
+    #nosetests --exclude=.*
+    true
   '';
 
 
