@@ -15,7 +15,7 @@ buildPythonPackage rec {
   checkInputs = [ nose ];
 
   checkPhase = ''
-    nosetests -e test_connect_tcp -e test_connect_ws
+    nosetests -e test_connect_tcp -e test_connect_ws -e test_reconnect_ws_retain_username_password
   '';
 
 
