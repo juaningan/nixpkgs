@@ -1,5 +1,5 @@
 { stdenv, buildPythonPackage, fetchPypi, isPy3k
-, transitions, websockets, passlib, docopt, pyyaml }:
+, transitions, websockets, passlib, docopt, pyyaml, nose }:
 
 buildPythonPackage rec {
   pname = "hbmqtt";
@@ -11,6 +11,13 @@ buildPythonPackage rec {
     inherit pname version;
     sha256 = "9886b1c8321d16e971376dc609b902e0c84118846642b5e09f08a4ca876a7f2a";
   };
+
+  checkInputs = [ nose ];
+
+  checkPhase = ''
+    nosetests --exclude=.*
+  '';
+
 
   propagatedBuildInputs = [ transitions websockets passlib docopt pyyaml ];
 
