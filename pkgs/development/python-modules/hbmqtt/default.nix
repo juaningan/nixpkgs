@@ -15,8 +15,7 @@ buildPythonPackage rec {
   checkInputs = [ nose ];
 
   checkPhase = ''
-    #nosetests --exclude=.*
-    true
+    nosetests -e test_connect_tcp -e test_connect_ws
   '';
 
 
