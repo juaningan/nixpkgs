@@ -294,7 +294,7 @@
     "habitica" = ps: with ps; [  ];
     "hangouts" = ps: with ps; [  ];
     "harman_kardon_avr" = ps: with ps; [  ];
-    "harmony" = ps: with ps; [  ];
+    "harmony" = ps: with ps; [ aioharmony ];
     "hassio" = ps: with ps; [ aiohttp-cors ];
     "haveibeenpwned" = ps: with ps; [  ];
     "hddtemp" = ps: with ps; [  ];
